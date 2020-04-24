@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import Child from './Child'
+import {Button, Input} from 'antd'
+import './index.less'
 
 class Lify extends Component {
   constructor(props) {
@@ -21,10 +23,13 @@ class Lify extends Component {
   }
   render() {
     return (
-      <div>
+      <div className="wrap">
         <p>react</p>
         <button onClick={this.handleClick}>点击</button>
-        
+        <div>
+        <Input />
+        <Button type="primary">antd 按钮</Button>
+        </div>
         <p>{this.state.count}</p>
         <Child name={this.state.count} />
       </div>

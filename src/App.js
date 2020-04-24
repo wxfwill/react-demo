@@ -1,14 +1,10 @@
-import React from 'react';
-// import logo from './logo.svg';
-import './App.css';
-import Lify from './pages/demo/Lify'
+import React from "react";
+import "./App.css";
 
-function App() {
-  return (
-    <div className="App">
-        <Lify />
-    </div>
-  );
+class App extends React.Component {
+  render() {
+    return <div> {this.props.children}</div>;
+  }
 }
 
 export default App;
