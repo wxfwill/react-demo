@@ -1,7 +1,18 @@
 @import './default.less';
+ul,li,ol {
+    list-style: none;
+}
 
+.clearfix {
+    &::after {
+        content: '';
+        clear: both;
+        display: block;
+        visibility: hidden;
+    }
+} 
 .container {
-    // display: flex;
+    display: flex;
     .nav-left{
         width: 15%;
         min-width: 180px;
@@ -9,13 +20,15 @@
         background-color: #001529;
     }
     .main {
-        // flex: 1;
+        flex: 1;
         height: calc(100vh);
         background-color: @colorL;
         overflow: auto;
         .content {
             position: relative;
             padding: 20px;
+            width: 100%;
+            display: block;
         }
     }
 }
